@@ -19,7 +19,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
         _plugin.AddCommand("css_BsEntity", "Create Entity that will spawn each round when bombsite is limited", OnCreateEntity);
         _plugin.AddCommand("css_RemoveBsEntity", "Remove BS Entity using ID", OnRemoveEntity);
         _plugin.AddCommand("css_tpBsEntity", "Teleport to BS Entity using ID", TeleportToEntity);
-        _plugin.AddCommand("css_bsentitylist", "Placing entity mode", ShowEntityList);
+        _plugin.AddCommand("css_bsentitylist", "List of entities on this map", ShowEntityList);
         _plugin.AddCommand("css_placingmode", "Placing entity mode", OnPlacingMode);
     }
 
