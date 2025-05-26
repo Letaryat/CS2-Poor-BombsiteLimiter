@@ -73,7 +73,6 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
                             var maxs = bs.AbsOrigin! + bs.Collision!.Maxs;
 
                             _plugin.BombsiteUtils!.DrawWireframe3D(mins, maxs, _plugin.Config.BlockSiteLaser);
-                            _plugin.Logger.LogInformation($"Minsy: {mins} Maxs: {maxs} | {bs.AbsOrigin.X} {bs.AbsOrigin.Y} {bs.AbsOrigin}");
                         }
                     }
                 }
@@ -81,11 +80,9 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
                 {
                     if (_plugin.Config.DrawOnUnlockedBombsite)
                     {
-                            var mins = bs.AbsOrigin! + bs.Collision!.Mins;
-                            var maxs = bs.AbsOrigin! + bs.Collision!.Maxs;
-
-                            _plugin.BombsiteUtils!.DrawWireframe3D(mins, maxs, _plugin.Config.UnlockedSiteLaser);
-                            _plugin.Logger.LogInformation($"Minsy: {mins} Maxs: {maxs} | {bs.AbsOrigin.X} {bs.AbsOrigin.Y} {bs.AbsOrigin}");
+                        var mins = bs.AbsOrigin! + bs.Collision!.Mins;
+                        var maxs = bs.AbsOrigin! + bs.Collision!.Maxs;
+                        _plugin.BombsiteUtils!.DrawWireframe3D(mins, maxs, _plugin.Config.UnlockedSiteLaser);
                     }
                 }
             }
