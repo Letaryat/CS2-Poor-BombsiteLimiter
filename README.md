@@ -1,5 +1,5 @@
 # CS2-Poor-BombsiteLimiter
-Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict](https://github.com/NockyCZ/CS2_BombsitesRestrict) with a few new functions.<br/>
+Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by NockyCZ](https://github.com/NockyCZ/CS2_BombsitesRestrict) with a few new functions.<br/>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H8TK0L9)
 
 ## [🛠️] New functions
