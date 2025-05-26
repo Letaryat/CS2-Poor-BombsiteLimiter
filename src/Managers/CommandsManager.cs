@@ -94,9 +94,8 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
         var arg = commandInfo.GetArg(1);
         var id = Convert.ToInt32(arg);
         var prop = _plugin.PropManager!.GetPropById(id);
-
-        //Adding + 25 since props have collision 
-        var propPos = new Vector(prop!.posX + 25, prop!.posY + 25, prop!.posZ);
+ 
+        var propPos = new Vector(prop!.posX, prop!.posY, prop!.posZ);
 
         player.PlayerPawn.Value!.Teleport(propPos);
 
