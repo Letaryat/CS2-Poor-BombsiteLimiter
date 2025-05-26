@@ -10,7 +10,6 @@ namespace CS2_Poor_BombsiteLimiter.Managers;
 public class EventManager(CS2_Poor_BombsiteLimiter plugin)
 {
     private readonly CS2_Poor_BombsiteLimiter _plugin = plugin;
-    //private static CounterStrikeSharp.API.Modules.Timers.Timer? hudTimer;
     public bool ShowHud = true;
     public void RegisterEvents()
     {

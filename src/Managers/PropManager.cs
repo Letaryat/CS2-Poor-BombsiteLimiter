@@ -89,7 +89,6 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
         prop.DispatchSpawn();
         prop.SetModel(model);
         prop.Teleport(pos, angle);
-        //_plugin.PropManager!.PushCordsToFile(pos!, angle, bs);
     }
     public void SpawnProps(int bs)
     {

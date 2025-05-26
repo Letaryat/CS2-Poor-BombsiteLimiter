@@ -88,17 +88,4 @@ public class BombsiteLimiter_Utilities(CS2_Poor_BombsiteLimiter plugin)
         return input.Replace("\n", "\u2029");
     }
 
-
-    static public Vector GetForwardVector(QAngle angle)
-    {
-        float radYaw = (float)(angle.Y * Math.PI / 180.0);
-        float radPitch = (float)(angle.X * Math.PI / 180.0);
-
-        float x = (float)(Math.Cos(radPitch) * Math.Cos(radYaw));
-        float y = (float)(Math.Cos(radPitch) * Math.Sin(radYaw));
-        float z = (float)(-Math.Sin(radPitch));
-
-        return new Vector(x, y, z);
-    }
-
 }
