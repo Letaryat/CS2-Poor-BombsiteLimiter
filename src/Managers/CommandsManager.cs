@@ -27,7 +27,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
-        if (!AdminManager.PlayerHasPermissions(player, "@css/root"))
+        if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
         {
             player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoPermission"])}");
             return;
@@ -59,7 +59,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
-        if (!AdminManager.PlayerHasPermissions(player, "@css/root"))
+        if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
         {
             player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoPermission"])}");
             return;
@@ -80,7 +80,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
-        if (!AdminManager.PlayerHasPermissions(player, "@css/root"))
+        if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
         {
             player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoPermission"])}");
             return;
@@ -107,7 +107,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
-        if (!AdminManager.PlayerHasPermissions(player, "@css/root"))
+        if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
         {
             player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoPermission"])}");
             return;
@@ -125,7 +125,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
-        if (!AdminManager.PlayerHasPermissions(player, "@css/root"))
+        if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
         {
             player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoPermission"])}");
             return;
