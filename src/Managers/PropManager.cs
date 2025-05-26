@@ -82,7 +82,7 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
     public void CreateProp(Vector pos, QAngle angle)
     {
         if (pos == null || angle == null) return;
-        var model = "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl";
+        var model = _plugin.Config.FenceModel;
         CDynamicProp prop;
         prop = Utilities.CreateEntityByName<CDynamicProp>("prop_dynamic_override")!;
         prop.Collision.SolidType = SolidType_t.SOLID_VPHYSICS;

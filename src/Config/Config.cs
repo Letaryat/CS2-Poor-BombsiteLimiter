@@ -29,6 +29,9 @@ namespace CS2_Poor_BombsiteLimiter.Config
         [JsonPropertyName("PlacingMode")]
         public bool PlacingMode { get; set; } = true;
 
+        [JsonPropertyName("FenceModel")]
+        public string FenceModel { get; set; } = "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl";
+
         [JsonPropertyName("DrawLasers")]
         public bool DrawLasers { get; set; } = true;
 
