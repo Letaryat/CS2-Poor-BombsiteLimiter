@@ -97,17 +97,6 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
     public string bsToString(int bs)
     {
         return bs == 2 ? "B" : "A";
-        /*
-        if (_plugin.Config.TypeOfNotification == 1)
-        {
-            var message = Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["ChatMessage"]);
-            Server.PrintToChatAll($"{message}");
-        }
-        else if (_plugin.Config.TypeOfNotification == 2)
-        {
-
-        }
-        */
     }
 
 }

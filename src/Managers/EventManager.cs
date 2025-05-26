@@ -23,8 +23,7 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
         //Listeners:
         _plugin.RegisterListener<Listeners.OnServerPrecacheResources>((ResourceManifest manifest) =>
         {
-            manifest.AddResource("models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl");
-            //manifest.AddResource("models/chicken/chicken.vmdl");
+            manifest.AddResource(_plugin.Config.FenceModel);
         });
         _plugin.RegisterListener<Listeners.OnMapStart>(OnMapStart);
         _plugin.RegisterListener<Listeners.OnTick>(OnTick);
@@ -44,7 +43,6 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
         return HookResult.Continue;
     }
 
-
     private HookResult OnRoundFreezeEnd(EventRoundFreezeEnd @event, GameEventInfo info)
     {
         ShowHud = true;
@@ -54,7 +52,6 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
         });
         return HookResult.Continue;
     }
-
 
     private HookResult OnPlayerPing(EventPlayerPing @event, GameEventInfo info)
     {

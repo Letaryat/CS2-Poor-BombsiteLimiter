@@ -1,8 +1,8 @@
 # CS2-Poor-BombsiteLimiter
-BombsiteLimiter for CS2. Main logic is based on [CS2_BombsitesRestrict](https://github.com/NockyCZ/CS2_BombsitesRestrict) with a few new functions.
+Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict](https://github.com/NockyCZ/CS2_BombsitesRestrict) with a few new functions.
 
 ## [🛠️] New functions
-- Plugin can draw lasers around bombsites to indicate players if the bombsite is open or closed.
+- Plugin can draw lasers around bombsites to indicate players if the bombsite is open or closed. If both bombsites are disabled, laser will be not generated.
 - If PlacingMode is enabled, plugin will generate .json file for each map. Owners can create Entities / Props which will block way to get to the blocked bombsites. These props will spawn on Round Start if bombsite is blocked. 
 
 ## [📌] Setup
@@ -27,7 +27,7 @@ BombsiteLimiter for CS2. Main logic is based on [CS2_BombsitesRestrict](https://
 | DrawLasers (bool) | If lasers around bombsites should be drawned |
 | BlockSiteLaser (string) | What color blocked bombsite laser should be |
 | DrawOnUnlockedBombsite (bool) | If laser should be drawn of bombsite which is not blocked |
-| UnlockedSiteLaser | What color open bombsite laser should be | 
+| UnlockedSiteLaser (string) | What color open bombsite laser should be | 
 
 ## [🛡️] Admin commands
 | Command  | Description |

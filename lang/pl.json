@@ -1,6 +1,6 @@
 {
 	"Prefix": "{default} ------ {red}[BSLimiter]{default} ------ \n",
-	"Blocked": "Zablokowano Bombsite {DarkRed}{0}\n{default}Poniewaz jest zbyt malo graczy! (Minimum: {orange}{1})",
+	"Blocked": "Zablokowano Bombsite {DarkRed}{0}\n{default}Poniewaz jest zbyt malo graczy! (Minimum: {orange}{1}{default})",
 	"NoBlocked": "Wszystkie BS'y {lime}dostepne!",
 	"HudMessageHTML": "Zablokowano: {0}",
 	"NewEntity": "Utworzyłeś nowy obiekt dla Bombsite: {lime}{0}",
