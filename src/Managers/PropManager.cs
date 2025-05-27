@@ -88,8 +88,11 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
         prop = Utilities.CreateEntityByName<CDynamicProp>("prop_dynamic_override")!;
         prop.Collision.SolidType = SolidType_t.SOLID_VPHYSICS;
 
-        prop.DispatchSpawn();
+        prop.CBodyComponent!.SceneNode!.Owner!.Entity!.Flags &= unchecked((uint)~(1 << 2));
+
         prop.SetModel(model);
+        prop.DispatchSpawn();
+        
         prop.Teleport(pos, angle);
     }
     public void SpawnProps(int bs)
