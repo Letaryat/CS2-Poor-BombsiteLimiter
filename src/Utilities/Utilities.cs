@@ -62,19 +62,21 @@ public class BombsiteLimiter_Utilities(CS2_Poor_BombsiteLimiter plugin)
         Vector corner6 = new(corner1.X, corner1.Y, corner8.Z + 0);
         Vector corner7 = new(corner1.X, corner8.Y, corner8.Z + 0);
 
-        //bottom square
-        DrawLaserBetween(corner5, corner6, _color);
-        DrawLaserBetween(corner6, corner7, _color);
-        DrawLaserBetween(corner7, corner8, _color);
-        DrawLaserBetween(corner8, corner5, _color);
+        //Bottom Square
+        DrawLaserBetween(corner1, corner2, _color);
+        DrawLaserBetween(corner2, corner3, _color);
+        DrawLaserBetween(corner3, corner4, _color);
+        DrawLaserBetween(corner4, corner1, _color);
+
 
         if (_plugin.Config.ThreeDeeBox)
         {
-            //top square
-            DrawLaserBetween(corner1, corner2, _color);
-            DrawLaserBetween(corner2, corner3, _color);
-            DrawLaserBetween(corner3, corner4, _color);
-            DrawLaserBetween(corner4, corner1, _color);
+
+            //Upper square
+            DrawLaserBetween(corner5, corner6, _color);
+            DrawLaserBetween(corner6, corner7, _color);
+            DrawLaserBetween(corner7, corner8, _color);
+            DrawLaserBetween(corner8, corner5, _color);
 
             //connect them both to build a cube
             DrawLaserBetween(corner1, corner6, _color);
