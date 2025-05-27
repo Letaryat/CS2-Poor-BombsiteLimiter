@@ -9,7 +9,7 @@ Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by Nocky
 
 ## [📺] Video presentation
 This video shows some of the new functions of the plugin:
-<video src="[images/video.mp4](https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq)" width="320" height="240" controls></video>
+https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 
 ## [📌] Setup
 - Download latest release,
