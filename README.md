@@ -5,6 +5,11 @@ Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by Nocky
 ## [🛠️] New functions
 - Plugin can draw lasers around bombsites to indicate players if the bombsite is open or closed. If both bombsites are disabled, laser will be not generated.
 - If PlacingMode is enabled, plugin will generate .json file for each map. Owners can create Entities / Props which will block way to get to the blocked bombsites. These props will spawn on Round Start if bombsite is blocked. 
+- Possibility for server owners to block one specific bombsite depending on a map.
+
+## [📺] Video presentation
+This video shows some of the new functions of the plugin:
+<video src="[images/video.mp4](https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq)" width="320" height="240" controls></video>
 
 ## [📌] Setup
 - Download latest release,
@@ -19,16 +24,22 @@ Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by Nocky
 | Flag (string) | Which flag will have access to all of the commands  |
 | Type of Notification (int) | 0 - Both Chat and HTMLHud, 1 - Chat, 2 - HTML Hud  |
 | Hud Timer (float) | For how many seconds, Hud timer should be shown  |
-| MinPlayers (int) | Min players for both sites to be enabled  |
-| CountBots (bool) | If bots should be counted as MinPlayers  |
+| Min Players (int) | Min players for both sites to be enabled  |
+| Count Bots (bool) | If bots should be counted as MinPlayers  |
 | Team (int) | Which team should be counted as MinPlayers (0 - both, 1 - TT, 2 - CT) |
-| WhichSiteToBlock (int) | Which bombsite should be blocked (0 - all, 1 - A, 2 - B) |
-| PlacingMode (bool) | If placing mode should be enabled (Allows admin to place props which block way for players to get on bombsite) |
-| FenceModel (string) | Model for a prop |
-| DrawLasers (bool) | If lasers around bombsites should be drawned |
-| BlockSiteLaser (string) | What color blocked bombsite laser should be |
-| DrawOnUnlockedBombsite (bool) | If laser should be drawn of bombsite which is not blocked |
-| UnlockedSiteLaser (string) | What color open bombsite laser should be | 
+| Which Site To Block (int) | Which bombsite should be blocked (0 - all, 1 - A, 2 - B) |
+| Placing Mode (bool) | If placing mode should be enabled (Allows admin to place props which block way for players to get on bombsite) |
+| Fence Model (string) | Model for a prop |
+| Draw Lasers (bool) | If lasers around bombsites should be drawned |
+| 3D Box (bool) | If lasers should create a 3D box around bombsites |
+| Block Site Laser (string) | What color blocked bombsite laser should be |
+| Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
+| Unlocked Site Laser (string) | What color open bombsite laser should be | 
+| Per Map (Dictionary) | If map should have one specific bombsite always disabled. Example:   "PerMap": {
+	"de_dust2": "B",
+	"de_vertigo": "A"
+  }, |
+| Debug (bool) | If plugin should log information |
 
 ## [🛡️] Admin commands
 | Command  | Description |

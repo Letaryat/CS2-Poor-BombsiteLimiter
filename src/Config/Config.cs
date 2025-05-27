@@ -14,40 +14,40 @@ namespace CS2_Poor_BombsiteLimiter.Config
         [JsonPropertyName("Hud timer")]
         public float HudTimer { get; set; } = 20;
 
-        [JsonPropertyName("MinPlayers")]
+        [JsonPropertyName("Min Players")]
         public int MinPlayers { get; set; } = 10;
 
-        [JsonPropertyName("CountBots")]
+        [JsonPropertyName("Count Bots")]
         public bool CountBots { get; set; } = true;
 
         [JsonPropertyName("Team")]
         public int Team { get; set; } = 0;
 
-        [JsonPropertyName("WhichSiteToBlock")]
+        [JsonPropertyName("Which Site To Block")]
         public int WhichSiteToBlock { get; set; } = 0;
 
-        [JsonPropertyName("PlacingMode")]
+        [JsonPropertyName("Placing Mode")]
         public bool PlacingMode { get; set; } = true;
 
-        [JsonPropertyName("FenceModel")]
+        [JsonPropertyName("Fence Model")]
         public string FenceModel { get; set; } = "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl";
 
-        [JsonPropertyName("DrawLasers")]
+        [JsonPropertyName("Draw Lasers")]
         public bool DrawLasers { get; set; } = true;
 
-        [JsonPropertyName("3DBox")]
+        [JsonPropertyName("3D Box")]
         public bool ThreeDeeBox { get; set; } = true;
 
-        [JsonPropertyName("BlockSiteLaser")]
+        [JsonPropertyName("Block Site Laser")]
         public string BlockSiteLaser { get; set; } = "Red";
 
-        [JsonPropertyName("DrawOnUnlockedBombsite")]
+        [JsonPropertyName("Draw On Unlocked Bombsite")]
         public bool DrawOnUnlockedBombsite { get; set; } = true;
 
-        [JsonPropertyName("UnlockedSiteLaser")]
+        [JsonPropertyName("Unlocked Site Laser")]
         public string UnlockedSiteLaser { get; set; } = "Green";
 
-        [JsonPropertyName("PerMap")]
+        [JsonPropertyName("Per Map")]
         public Dictionary<string, string> PerMap { get; set; } = new Dictionary<string, string>();
 
         [JsonPropertyName("Debug")]
