@@ -12,6 +12,8 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
 {
     private readonly CS2_Poor_BombsiteLimiter _plugin = plugin;
     public string? blockedSite;
+
+
     public void ResetBombsites()
     {
         var Bombsites = Utilities.FindAllEntitiesByDesignerName<CBaseEntity>("func_bomb_target");
@@ -39,6 +41,8 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
 
     public void DisableBombsite()
     {
+        if (Utils.BombsiteLimiter_Utilities.GameRules().WarmupPeriod) return;
+
         var Bombsites = Utilities.FindAllEntitiesByDesignerName<CBaseEntity>("func_bomb_target");
         //var blocked = BlockSiteByIndex();
         var AllPlayers = _plugin.BombsiteUtils!.GetAllPlayers();

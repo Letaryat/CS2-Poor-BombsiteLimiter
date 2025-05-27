@@ -25,6 +25,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
 
     private void OnCreateEntity(CCSPlayerController? player, CommandInfo commandInfo)
     {
+        if (_plugin.DisablePlugin) return;
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
         if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
@@ -57,6 +58,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
 
     private void OnRemoveEntity(CCSPlayerController? player, CommandInfo commandInfo)
     {
+        if (_plugin.DisablePlugin) return;
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
         if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
@@ -78,6 +80,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
 
     private void TeleportToEntity(CCSPlayerController? player, CommandInfo commandInfo)
     {
+        if (_plugin.DisablePlugin) return;
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
         if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
@@ -104,6 +107,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
 
     private void ShowEntityList(CCSPlayerController? player, CommandInfo commandInfo)
     {
+        if (_plugin.DisablePlugin) return;
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
         if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))
@@ -122,6 +126,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
     }
     private void OnPlacingMode(CCSPlayerController? player, CommandInfo commandInfo)
     {
+        if (_plugin.DisablePlugin) return;
         if (player == null || player.PlayerPawn == null) return;
         if (!_plugin.Config.PlacingMode) return;
         if (!AdminManager.PlayerHasPermissions(player, _plugin.Config.Flag))

@@ -27,6 +27,8 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
 
     public List<PlacingModel> PlacingPlayers = new();
     public bool AllowPlacingEntities = false;
+
+    public bool DisablePlugin = false;
     public override void Load(bool hotReload)
     {
         //Logger.LogInformation("Poor bombsite limiter loaded!");

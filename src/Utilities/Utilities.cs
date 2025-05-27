@@ -37,17 +37,17 @@ public class BombsiteLimiter_Utilities(CS2_Poor_BombsiteLimiter plugin)
     * DrawWireFrame3D was yoinked entirely with some changes from sharptimer since i was too lazy to make it by myself: https://github.com/Letaryat/poor-sharptimer/blob/main/src/Plugin/Utils.cs#L482
     */
 
-    static public void DrawLaserBetween(Vector startPos, Vector endPos, string _color)
+    public void DrawLaserBetween(Vector startPos, Vector endPos, string _color)
     {
         CBeam beam = Utilities.CreateEntityByName<CBeam>("beam")!;
         if (beam == null) { return; }
 
         //remove +5 from pos1 and pos2 if you want to beam to be at the bottom.
-        var pos1 = new Vector(startPos.X, startPos.Y, startPos.Z + 5);
-        var pos2 = new Vector(endPos.X, endPos.Y, endPos.Z + 5);
+        var pos1 = new Vector(startPos.X, startPos.Y, startPos.Z + _plugin.Config.LaserDistance);
+        var pos2 = new Vector(endPos.X, endPos.Y, endPos.Z + _plugin.Config.LaserDistance);
 
         beam.Render = Color.FromName(_color);
-        beam.Width = 1.0f;
+        beam.Width = _plugin.Config.LaserWidth;
         beam.Teleport(pos1, new QAngle(), new Vector());
         beam.EndPos.Add(pos2);
         beam.DispatchSpawn();
@@ -90,6 +90,11 @@ public class BombsiteLimiter_Utilities(CS2_Poor_BombsiteLimiter plugin)
     public static string ReplaceMessageNewlines(string input)
     {
         return input.Replace("\n", "\u2029");
+    }
+
+    internal static CCSGameRules GameRules()
+    {
+        return Utilities.FindAllEntitiesByDesignerName<CCSGameRulesProxy>("cs_gamerules").First().GameRules!;
     }
 
 }

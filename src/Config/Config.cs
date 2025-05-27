@@ -38,6 +38,12 @@ namespace CS2_Poor_BombsiteLimiter.Config
         [JsonPropertyName("3D Box")]
         public bool ThreeDeeBox { get; set; } = true;
 
+        [JsonPropertyName("Laser width")]
+        public float LaserWidth { get; set; } = 1;
+
+        [JsonPropertyName("Laser Distance from Ground")]
+        public float LaserDistance { get; set; } = 5;
+
         [JsonPropertyName("Block Site Laser")]
         public string BlockSiteLaser { get; set; } = "Red";
 
