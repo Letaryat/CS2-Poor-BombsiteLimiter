@@ -94,7 +94,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
         var arg = commandInfo.GetArg(1);
         var id = Convert.ToInt32(arg);
         var prop = _plugin.PropManager!.GetPropById(id);
- 
+
         var propPos = new Vector(prop!.posX, prop!.posY, prop!.posZ);
 
         player.PlayerPawn.Value!.Teleport(propPos);
@@ -167,9 +167,10 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
         }
         catch (Exception ex)
         {
-            _plugin.Logger.LogInformation($"{ex}");
+            _plugin.DebugLog($"{ex}");
         }
 
     }
+
 
 }

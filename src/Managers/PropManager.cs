@@ -33,7 +33,7 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
         }
         catch (Exception ex)
         {
-            _plugin.Logger.LogInformation($"{ex}");
+            _plugin.DebugLog($"{ex}");
         }
     }
 
@@ -84,8 +84,10 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
         if (pos == null || angle == null) return;
         var model = _plugin.Config.FenceModel;
         CDynamicProp prop;
+
         prop = Utilities.CreateEntityByName<CDynamicProp>("prop_dynamic_override")!;
         prop.Collision.SolidType = SolidType_t.SOLID_VPHYSICS;
+
         prop.DispatchSpawn();
         prop.SetModel(model);
         prop.Teleport(pos, angle);

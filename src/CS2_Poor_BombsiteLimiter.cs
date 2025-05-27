@@ -28,7 +28,9 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public bool AllowPlacingEntities = false;
     public override void Load(bool hotReload)
     {
-        Logger.LogInformation("Poor bombsite limiter loaded!");
+        //Logger.LogInformation("Poor bombsite limiter loaded!");
+
+        Console.WriteLine("CS2_Poor_BombsiteLimiter loaded! HF!");
 
         Instance = this;
         EventManager = new EventManager(this);
@@ -48,12 +50,17 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     }
     public override void Unload(bool hotReload)
     {
-        Logger.LogInformation("Poor bombsite limiter unloaded!");
+        Console.WriteLine("CS2_Poor_BombsiteLimiter unloaded!");
     }
 
     public string DebugLog(string message)
     {
-        return $"PoorBombsiteLimiter | {message}";
+        if (Config.Debug)
+        {
+            return $"PoorBombsiteLimiter | {message}";
+        }
+        return string.Empty;
+        
     }
 
 }

@@ -25,7 +25,7 @@ namespace CS2_Poor_BombsiteLimiter.Config
 
         [JsonPropertyName("WhichSiteToBlock")]
         public int WhichSiteToBlock { get; set; } = 0;
-        
+
         [JsonPropertyName("PlacingMode")]
         public bool PlacingMode { get; set; } = true;
 
@@ -43,5 +43,8 @@ namespace CS2_Poor_BombsiteLimiter.Config
 
         [JsonPropertyName("UnlockedSiteLaser")]
         public string UnlockedSiteLaser { get; set; } = "Green";
+
+        [JsonPropertyName("Debug")]
+        public bool Debug { get; set; } = true;
     }
 }

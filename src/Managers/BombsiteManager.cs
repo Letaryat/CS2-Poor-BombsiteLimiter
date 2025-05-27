@@ -65,10 +65,6 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
                         bs.AcceptInput("Disable");
                         if (_plugin.Config.DrawLasers)
                         {
-                            /*
-                            var mins = bs.Collision!.Mins;
-                            var maxs = bs.Collision!.Maxs;
-                            */
                             var mins = bs.AbsOrigin! + bs.Collision!.Mins;
                             var maxs = bs.AbsOrigin! + bs.Collision!.Maxs;
 
