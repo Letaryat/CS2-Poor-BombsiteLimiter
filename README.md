@@ -51,6 +51,7 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
   "PlacingMode": true,
   "FenceModel": "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl",
   "DrawLasers": true,
+  "3DBox": true,
   "BlockSiteLaser": "Red",
   "DrawOnUnlockedBombsite": true,
   "UnlockedSiteLaser": "Green",
