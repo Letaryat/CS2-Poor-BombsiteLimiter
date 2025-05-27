@@ -142,7 +142,7 @@ public class CommandsManager(CS2_Poor_BombsiteLimiter plugin)
             var placingEntry = _plugin.PlacingPlayers.FirstOrDefault(p => p.Slot == slot);
             if (placingEntry != null)
             {
-                _plugin.PlacingPlayers.RemoveAt(slot);
+                _plugin.PlacingPlayers.Remove(placingEntry);
                 player.PrintToChat($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["PlacingOff"])}");
                 return;
             }

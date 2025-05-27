@@ -21,7 +21,7 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
     {
         var map = Server.MapName;
         _mapName = map;
-        Path.Combine(_plugin.ModuleDirectory, "maps", $"{map}.json");
+        _mapFilePath = Path.Combine(_plugin.ModuleDirectory, "maps", $"{map}.json");
     }
     public void GenerateJsonFile()
     {
