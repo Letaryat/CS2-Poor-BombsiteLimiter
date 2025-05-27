@@ -73,3 +73,4 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | css_tpbsentity **ID** | Teleport to the entity that you placed |
 | css_bsentitylist | Prints all entities on map in player console |
 
+### [🚨] Plugin might be poorly written and have some issues. I have no idea what I am doing, but when tested it worked fine.
