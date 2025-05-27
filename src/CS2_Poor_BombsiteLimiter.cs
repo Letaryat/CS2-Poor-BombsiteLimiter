@@ -5,6 +5,7 @@ using CS2_Poor_BombsiteLimiter.Config;
 using CS2_Poor_BombsiteLimiter.Utils;
 using CS2_Poor_BombsiteLimiter.Models;
 using CounterStrikeSharp.API;
+using System.Diagnostics;
 namespace CS2_Poor_BombsiteLimiter;
 
 public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
@@ -12,7 +13,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public override string ModuleName => "Poor Bombsitelimiter";
 
     public override string ModuleAuthor => "Letaryat";
-    public override string ModuleVersion => "1.2";
+    public override string ModuleVersion => "1.3";
 
     public required PluginConfig Config { get; set; }
     public static CS2_Poor_BombsiteLimiter? Instance { get; private set; }
@@ -32,7 +33,6 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public override void Load(bool hotReload)
     {
         //Logger.LogInformation("Poor bombsite limiter loaded!");
-
         Console.WriteLine("CS2_Poor_BombsiteLimiter loaded! HF!");
 
         Instance = this;
@@ -44,6 +44,20 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
 
         EventManager.RegisterEvents();
         CommandsManager.RegisterCommands();
+
+        if (hotReload)
+        {
+            DebugLog("Reloading and gathering new information about current map!");
+            try
+            {
+                PropManager.GetMapInfoOnReload();
+            }
+            catch (Exception ex)
+            {
+                DebugLog(ex.ToString());
+            }
+            
+        }
 
     }
 
@@ -63,7 +77,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
             Logger.LogInformation($"PoorBombsiteLimiter | {message}");
         }
         return string.Empty;
-        
+
     }
 
 }

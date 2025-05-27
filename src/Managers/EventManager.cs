@@ -40,7 +40,7 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
     {
         if (_plugin.DisablePlugin) return HookResult.Continue;
         _plugin.BombsiteManager!.ResetBombsites();
-
+        ShowHud = false;
         return HookResult.Continue;
     }
 

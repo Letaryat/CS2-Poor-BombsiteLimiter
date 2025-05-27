@@ -17,6 +17,12 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
 
     private static readonly object _fileLock = new();
 
+    public void GetMapInfoOnReload()
+    {
+        var map = Server.MapName;
+        _mapName = map;
+        Path.Combine(_plugin.ModuleDirectory, "maps", $"{map}.json");
+    }
     public void GenerateJsonFile()
     {
         string directoryPath = Path.Combine(_plugin.ModuleDirectory, "maps");
