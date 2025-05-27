@@ -4,6 +4,7 @@ using CS2_Poor_BombsiteLimiter.Managers;
 using CS2_Poor_BombsiteLimiter.Config;
 using CS2_Poor_BombsiteLimiter.Utils;
 using CS2_Poor_BombsiteLimiter.Models;
+using CounterStrikeSharp.API;
 namespace CS2_Poor_BombsiteLimiter;
 
 public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
@@ -57,7 +58,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     {
         if (Config.Debug)
         {
-            return $"PoorBombsiteLimiter | {message}";
+            Logger.LogInformation($"PoorBombsiteLimiter | {message}");
         }
         return string.Empty;
         

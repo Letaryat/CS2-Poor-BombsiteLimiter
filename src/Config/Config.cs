@@ -9,7 +9,7 @@ namespace CS2_Poor_BombsiteLimiter.Config
         public string Flag { get; set; } = "@css/root";
 
         [JsonPropertyName("Type of Notification")]
-        public int TypeOfNotification { get; set; } = 2;
+        public int TypeOfNotification { get; set; } = 0;
 
         [JsonPropertyName("Hud timer")]
         public float HudTimer { get; set; } = 20;
@@ -35,6 +35,9 @@ namespace CS2_Poor_BombsiteLimiter.Config
         [JsonPropertyName("DrawLasers")]
         public bool DrawLasers { get; set; } = true;
 
+        [JsonPropertyName("3DBox")]
+        public bool ThreeDeeBox { get; set; } = true;
+
         [JsonPropertyName("BlockSiteLaser")]
         public string BlockSiteLaser { get; set; } = "Red";
 
@@ -43,6 +46,9 @@ namespace CS2_Poor_BombsiteLimiter.Config
 
         [JsonPropertyName("UnlockedSiteLaser")]
         public string UnlockedSiteLaser { get; set; } = "Green";
+
+        [JsonPropertyName("PerMap")]
+        public Dictionary<string, string> PerMap { get; set; } = new Dictionary<string, string>();
 
         [JsonPropertyName("Debug")]
         public bool Debug { get; set; } = true;

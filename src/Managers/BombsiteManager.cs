@@ -40,8 +40,23 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
     public void DisableBombsite()
     {
         var Bombsites = Utilities.FindAllEntitiesByDesignerName<CBaseEntity>("func_bomb_target");
-        var blocked = BlockSiteByIndex();
+        //var blocked = BlockSiteByIndex();
         var AllPlayers = _plugin.BombsiteUtils!.GetAllPlayers();
+
+        var PerMap = _plugin.Config.PerMap;
+        var mapName = _plugin.PropManager!._mapName;
+
+        int blocked;
+        if (PerMap != null && PerMap.TryGetValue(mapName!, out var value))
+        {
+            blocked = bsToInt(value.ToUpper());
+            _plugin.DebugLog($"Blocking site from CFG: {value} for map: {mapName}");
+        }
+        else
+        {
+            blocked = BlockSiteByIndex();
+            _plugin.DebugLog($"Blocking random bombsite: {bsToString(blocked)}");
+        }
 
         blockedSite = bsToString(blocked);
 
@@ -93,6 +108,11 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
     public string bsToString(int bs)
     {
         return bs == 2 ? "B" : "A";
+    }
+
+    public int bsToInt(string bs)
+    {
+        return bs == "B" ? 2 : 1;
     }
 
 }
