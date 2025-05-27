@@ -12,10 +12,10 @@ namespace CS2_Poor_BombsiteLimiter.Config
         public int TypeOfNotification { get; set; } = 0;
 
         [JsonPropertyName("Hud timer")]
-        public float HudTimer { get; set; } = 20;
+        public float HudTimer { get; set; } = 15;
 
         [JsonPropertyName("Min Players")]
-        public int MinPlayers { get; set; } = 10;
+        public int MinPlayers { get; set; } = 5;
 
         [JsonPropertyName("Count Bots")]
         public bool CountBots { get; set; } = true;
