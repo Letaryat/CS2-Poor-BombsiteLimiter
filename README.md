@@ -38,12 +38,29 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Per Map (Dictionary) | If map should have one specific bombsite always disabled. |
 | Debug (bool) | If plugin should log information |
 
-**Per Map** example:
+**Config** example:
 ```
-"PerMap": {
+{
+  "Flag": "@css/root",
+  "Type of Notification": 0,
+  "Hud timer": 20,
+  "MinPlayers": 10,
+  "CountBots": true,
+  "Team": 0,
+  "WhichSiteToBlock": 0,
+  "PlacingMode": true,
+  "FenceModel": "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl",
+  "DrawLasers": true,
+  "BlockSiteLaser": "Red",
+  "DrawOnUnlockedBombsite": true,
+  "UnlockedSiteLaser": "Green",
+  "PerMap": {
 	"de_dust2": "B",
 	"de_vertigo": "A"
   },
+  "Debug": true,
+  "ConfigVersion": 1
+}
 ```
 
 ## [🛡️] Admin commands
