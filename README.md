@@ -27,10 +27,10 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Min Players (int) | Min players for both sites to be enabled  |
 | Count Bots (bool) | If bots should be counted as MinPlayers  |
 | Team (int) | Which team should be counted as MinPlayers (0 - both, 1 - TT, 2 - CT) |
-| Which Site To Block (int) | Which bombsite should be blocked (0 - all, 1 - A, 2 - B) |
+| Which Site To Block (int) | Which bombsite should be blocked (0 - Random, 1 - A, 2 - B) |
 | Placing Mode (bool) | If placing mode should be enabled (Allows admin to place props which block way for players to get on bombsite) |
 | Fence Model (string) | Model for a prop |
-| Draw Lasers (bool) | If lasers around bombsites should be drawned |
+| Draw Lasers (bool) | If lasers around bombsites should be drawn |
 | 3D Box (bool) | If lasers should create a 3D box around bombsites |
 | Block Site Laser (string) | What color blocked bombsite laser should be |
 | Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
