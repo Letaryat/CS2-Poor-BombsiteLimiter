@@ -32,6 +32,8 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Fence Model (string) | Model for a prop |
 | Draw Lasers (bool) | If lasers around bombsites should be drawn |
 | 3D Box (bool) | If lasers should create a 3D box around bombsites |
+| Laser width (float) | Width of laser |
+| Laser Distance from Ground (float) | Laser distance from ground |
 | Block Site Laser (string) | What color blocked bombsite laser should be |
 | Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
 | Unlocked Site Laser (string) | What color open bombsite laser should be | 
@@ -44,17 +46,19 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
   "Flag": "@css/root",
   "Type of Notification": 0,
   "Hud timer": 20,
-  "MinPlayers": 10,
-  "CountBots": true,
+  "Min Players": 10,
+  "Count Bots": true,
   "Team": 0,
-  "WhichSiteToBlock": 0,
-  "PlacingMode": true,
-  "FenceModel": "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl",
-  "DrawLasers": true,
-  "3DBox": true,
-  "BlockSiteLaser": "Red",
-  "DrawOnUnlockedBombsite": true,
-  "UnlockedSiteLaser": "Green",
+  "Which Site To Block": 0,
+  "Placing Mode": true,
+  "Fence Model": "models/props/de_nuke/hr_nuke/chainlink_fence_001/chainlink_fence_001_128_capped.vmdl",
+  "Draw Lasers": true,
+  "3D Box": true,
+  "Laser width": 10,
+  "Laser Distance from Ground": 100,
+  "Block Site Laser": "Red",
+  "Draw On Unlocked Bombsite": true,
+  "Unlocked Site Laser": "Green",
   "PerMap": {
 	"de_dust2": "B",
 	"de_vertigo": "A"
