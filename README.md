@@ -35,11 +35,16 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Block Site Laser (string) | What color blocked bombsite laser should be |
 | Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
 | Unlocked Site Laser (string) | What color open bombsite laser should be | 
-| Per Map (Dictionary) | If map should have one specific bombsite always disabled. Example:   "PerMap": {
+| Per Map (Dictionary) | If map should have one specific bombsite always disabled. |
+| Debug (bool) | If plugin should log information |
+
+**Per Map** example:
+```
+"PerMap": {
 	"de_dust2": "B",
 	"de_vertigo": "A"
-  }, |
-| Debug (bool) | If plugin should log information |
+  },
+```
 
 ## [🛡️] Admin commands
 | Command  | Description |
