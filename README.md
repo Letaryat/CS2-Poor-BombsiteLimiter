@@ -40,7 +40,7 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Per Map (Dictionary<string, string>) | If map should have one specific bombsite always disabled. |
 | Debug (bool) | If plugin should log information |
 
-- In lang "NoBlockedHTML" can be empty if you don't want HTMLHud to show when both bombsites are enabled.
+- In lang/ "NoBlockedHTML" can be empty if you don't want HTMLHud to show when both bombsites are enabled.
 ```
 	"NoBlockedHTML": "",
 ```
