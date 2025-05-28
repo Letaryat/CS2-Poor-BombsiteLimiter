@@ -1,15 +1,15 @@
 {
 	"Prefix": "{default} ------ {red}[BSLimiter]{default} ------ \n",
-	"Blocked": "Zablokowano Bombsite {DarkRed}{0}\n{default}Poniewaz jest zbyt malo graczy! (Minimum: {orange}{1}{default})",
-	"NoBlocked": "Wszystkie BS'y {lime}dostepne!",
-	"HudMessageHTML": "Zablokowano: {0}",
-	"NewEntity": "Utworzyłeś nowy obiekt dla Bombsite: {lime}{0}",
-	"EntityRemoved": "Obiekt z ID {lime}{0} został {DarkRed}usunięty!",
-	"NoPermission": "Nie posiadasz permisji!",
+	"Blocked": "Zablokowano Bombsite {DarkRed}{0}\n{default}Zbyt mała liczba graczy! (Minimum: {orange}{1}{default})",
+	"NoBlocked": "Wszystkie bombsite'y są {lime}dostepne!",
+	"HudMessageHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">W tej rundzie Bombsite </font><font color=\"#F53131\" class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\">{0}</font> <br><font color=\"#FFFFFF\"> jest zablokowany!</font></div>",
+	"NewEntity": "Utworzyłeś nowy obiekt dla bombsite'u: {lime}{0}",
+	"EntityRemoved": "Obiekt z ID {lime}{0}{default} został {DarkRed}usunięty!",
+	"NoPermission": "{red}Nie posiadasz uprawnień do tej komendy!",
 	"PlacingOff": "Tryb tworzenia obiektów został {DarkRed}wyłączony!",
 	"PlacingOn": "Tryb tworzenia obiektów został {Green}włączony!",
 	"TurnOnPlacing": "Musisz włączyć tryb tworzenia obiektów!",
-	"ErrorChooseSite": "Musisz wybrać odpowiedni Bombsite! 1 (A) lub 2 (B).\n Uzyj w poprawny sposób: {lime}{0}",
-	"ErrorTpID": "Musisz podać odpowiednie ID!.\n Uzyj w poprawny sposób: {lime}{0}",
-	"PrintedInConsole": "Sprawdź konsolę!"
+	"ErrorChooseSite": "Musisz wybrać odpowiedni Bombsite! 1 (A) lub 2 (B).\n Spróbuj ponownie używając: {lime}{0}",
+	"ErrorTpID": "Musisz podać odpowiednie ID!.\n Spróbuj ponownie używając: {lime}{0}",
+	"PrintedInConsole": "Sprawdź wynik w konsoli!"
 }

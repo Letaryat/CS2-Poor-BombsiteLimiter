@@ -1,15 +1,15 @@
 {
 	"Prefix": "{default} ------ {red}[BSLimiter]{default} ------ \n",
-	"Blocked": "Bombsite {DarkRed}{0}{default} is blocked!\n{default}There is not enough players! (Minimum: {orange}{1}{default})",
+	"Blocked": "Bombsite {DarkRed}{0}{default} is currently blocked!\n{default}There is not enough players! (Minimum: {orange}{1}{default})",
 	"NoBlocked": "All Bombsites are {lime}available!",
-	"HudMessageHTML": "Blocked: {0}",
-	"NewEntity": "New entity for bombsite: {lime}{0}{default} was created!",
-	"EntityRemoved": "Entity with id {lime}{0} has been {DarkRed}deleted!",
-	"NoPermission": "You do not have permission to do that!",
+	"HudMessageHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">In this round</font><br><div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">Bombsite: </font><font color=\"#F53131\" class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\">{0}</font> <br><font color=\"#FFFFFF\"> is blocked!</font></div>",
+	"NewEntity": "A new entity has been created for bombsite: {lime}{0}{default}!",
+	"EntityRemoved": "The entity with id {lime}{0}{default} has been {DarkRed}deleted!",
+	"NoPermission": "{red}You do not have permission to do that!",
 	"PlacingOff": "Placing mode has been {DarkRed}disabled!",
 	"PlacingOn": "Placing mode has been {Green}enabled!",
-	"TurnOnPlacing": "You need to turn on placing mode!",
+	"TurnOnPlacing": "You need to turn {lime}on{default} placing mode first!",
 	"ErrorChooseSite": "You need to choose a site! 1 (A) or 2 (B).\n Try again using: {lime}{0}",
 	"ErrorTpID": "You need to use a proper ID!.\n Try again using: {lime}{0}",
-	"PrintedInConsole": "Check console!"
+	"PrintedInConsole": "Check your console for details!"
 }
