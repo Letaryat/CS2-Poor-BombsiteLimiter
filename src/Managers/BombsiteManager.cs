@@ -64,6 +64,15 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
 
         blockedSite = bsToString(blocked);
 
+
+
+        if (AllPlayers >= _plugin.Config.MinPlayers)
+        {
+            var message = Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoBlocked", blockedSite, _plugin.Config.MinPlayers]);
+            Server.PrintToChatAll($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{message}");
+            return;
+        }
+
         if (_plugin.Config.TypeOfNotification != 2)
         {
             var message = Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Blocked", blockedSite, _plugin.Config.MinPlayers]);
@@ -74,7 +83,7 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
         {
             var site = new CBombTarget(NativeAPI.GetEntityFromIndex((int)bs.Index));
             int entitySite = site.IsBombSiteB ? 2 : 1;
-            if (_plugin.Config.MinPlayers >= AllPlayers)
+            if (_plugin.Config.MinPlayers > AllPlayers)
             {
                 if (entitySite == blocked)
                 {
@@ -100,11 +109,6 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
                         _plugin.BombsiteUtils!.DrawWireframe3D(mins, maxs, _plugin.Config.UnlockedSiteLaser);
                     }
                 }
-            }
-            else
-            {
-                var message = Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["NoBlocked", blockedSite, _plugin.Config.MinPlayers]);
-                Server.PrintToChatAll($"{Utils.BombsiteLimiter_Utilities.ReplaceMessageNewlines(_plugin.Localizer["Prefix"])}{message}");
             }
         }
     }

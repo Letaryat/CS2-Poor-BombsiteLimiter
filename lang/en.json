@@ -2,6 +2,7 @@
 	"Prefix": "{default} ------ {red}[BSLimiter]{default} ------ \n",
 	"Blocked": "Bombsite {DarkRed}{0}{default} is currently blocked!\n{default}There is not enough players! (Minimum: {orange}{1}{default})",
 	"NoBlocked": "All Bombsites are {lime}available!",
+	"NoBlockedHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">Bombsites are</font><br><font color=\"#03FC0B\" class=\"fontSize-l\">OPEN!</font>",
 	"HudMessageHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">In this round</font><br><div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">Bombsite: </font><font color=\"#F53131\" class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\">{0}</font> <br><font color=\"#FFFFFF\"> is blocked!</font></div>",
 	"NewEntity": "A new entity has been created for bombsite: {lime}{0}{default}!",
 	"EntityRemoved": "The entity with id {lime}{0}{default} has been {DarkRed}deleted!",

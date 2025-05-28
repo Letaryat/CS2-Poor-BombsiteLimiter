@@ -11,6 +11,7 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
 {
     private readonly CS2_Poor_BombsiteLimiter _plugin = plugin;
     public bool ShowHud = false;
+
     public void RegisterEvents()
     {
         //Events:
@@ -130,10 +131,24 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
         {
             if (_plugin.Config.TypeOfNotification != 1)
             {
-                foreach (var player in Utilities.GetPlayers().Where(p => !p.IsBot && !p.IsHLTV))
+                if (_plugin.BombsiteUtils!.GetAllPlayers() >= _plugin.Config.MinPlayers)
                 {
-                    player.PrintToCenterHtml($"{_plugin.Localizer["HudMessageHTML", _plugin.BombsiteManager!.blockedSite!]}");
+                    if (!string.IsNullOrWhiteSpace(_plugin.Localizer["NoBlockedHTML"].ToString()))
+                    {
+                        foreach (var player in Utilities.GetPlayers().Where(p => !p.IsBot && !p.IsHLTV))
+                        {
+                            player.PrintToCenterHtml($"{_plugin.Localizer["NoBlockedHTML"]}");
+                        }
+                    }
                 }
+                else
+                {
+                    foreach (var player in Utilities.GetPlayers().Where(p => !p.IsBot && !p.IsHLTV))
+                    {
+                        player.PrintToCenterHtml($"{_plugin.Localizer["HudMessageHTML", _plugin.BombsiteManager!.blockedSite!]}");
+                    }
+                }
+
             }
         }
 

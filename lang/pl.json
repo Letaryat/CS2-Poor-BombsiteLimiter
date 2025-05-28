@@ -2,6 +2,7 @@
 	"Prefix": "{default} ------ {red}[BSLimiter]{default} ------ \n",
 	"Blocked": "Zablokowano Bombsite {DarkRed}{0}\n{default}Zbyt mała liczba graczy! (Minimum: {orange}{1}{default})",
 	"NoBlocked": "Wszystkie bombsite'y są {lime}dostepne!",
+	"NoBlockedHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">Wszystkie bombsite'y są</font><br><font color=\"#03FC0B\" class=\"fontSize-l\">OTWARTE</font>",
 	"HudMessageHTML": "<div class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\"><font color=\"#FFFFFF\">W tej rundzie Bombsite </font><font color=\"#F53131\" class=\"fontSize-l\" style=\"text-align: center; padding: 5px;\">{0}</font> <br><font color=\"#FFFFFF\"> jest zablokowany!</font></div>",
 	"NewEntity": "Utworzyłeś nowy obiekt dla bombsite'u: {lime}{0}",
 	"EntityRemoved": "Obiekt z ID {lime}{0}{default} został {DarkRed}usunięty!",
