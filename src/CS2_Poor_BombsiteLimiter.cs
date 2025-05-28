@@ -13,7 +13,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public override string ModuleName => "Poor Bombsitelimiter";
 
     public override string ModuleAuthor => "Letaryat";
-    public override string ModuleVersion => "1.3";
+    public override string ModuleVersion => "1.3.2";
 
     public required PluginConfig Config { get; set; }
     public static CS2_Poor_BombsiteLimiter? Instance { get; private set; }
