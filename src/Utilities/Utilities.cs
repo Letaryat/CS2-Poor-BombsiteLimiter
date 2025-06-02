@@ -97,4 +97,13 @@ public class BombsiteLimiter_Utilities(CS2_Poor_BombsiteLimiter plugin)
         return Utilities.FindAllEntitiesByDesignerName<CCSGameRulesProxy>("cs_gamerules").First().GameRules!;
     }
 
+    public Vector? CalculateMid(CBaseEntity bs)
+    {
+        if (bs == null) return null;
+        var mins = bs.AbsOrigin! + bs.Collision!.Mins;
+        var maxs = bs.AbsOrigin! + bs.Collision!.Maxs;
+        var center = (mins + maxs) / 2;
+        return center;
+    }
+
 }

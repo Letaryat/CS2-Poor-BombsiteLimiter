@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Text.Json.Serialization;
 using CounterStrikeSharp.API.Core;
 
@@ -52,6 +53,23 @@ namespace CS2_Poor_BombsiteLimiter.Config
 
         [JsonPropertyName("Unlocked Site Laser")]
         public string UnlockedSiteLaser { get; set; } = "Green";
+        [JsonPropertyName("Bombsite Sprite")]
+        public string BombsiteSprite { get; set; } = "particles/bombsites/stopcat_2.vpcf";
+        [JsonPropertyName("Bombsite Sprite Height")]
+        public float BombsiteSpriteHeight { get; set; } = 200;
+
+        [JsonPropertyName("Text Display")]
+        public bool TextDisplay { get; set; } = true;
+        [JsonPropertyName("Text Message")]
+        public string TextMessage { get; set; } = "Blocked!";
+        [JsonPropertyName("Font Size")]
+        public float FontSize { get; set; } = 35;
+        [JsonPropertyName("Font Name")]
+        public string FontName { get; set; } = "Arial";
+        [JsonPropertyName("Text Color")]
+        public string TextColor { get; set; } = "Red";
+        [JsonPropertyName("Text Height")]
+        public float TextHeight { get; set; } = 100;
 
         [JsonPropertyName("Per Map")]
         public Dictionary<string, string> PerMap { get; set; } = new Dictionary<string, string>();
