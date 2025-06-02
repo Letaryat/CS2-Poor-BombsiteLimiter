@@ -37,6 +37,14 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Block Site Laser (string) | What color blocked bombsite laser should be |
 | Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
 | Unlocked Site Laser (string) | What color open bombsite laser should be | 
+| Bombsite Sprite (string) | Can be null. It spawns a sprite on center of a blocked bombsite |
+| Bombsite Sprite Height (float) | Height from the ground of a sprite |
+| Text Display (bool) | If point_worldtext should be created that follows player camera |
+| Text Message (string) | Message of a point_worldtext that is created on the center of a blocked bombsite |
+| Font Size (float) | Size of a point_worldtext |
+| Font Name (string) | Font name of a point_worldtext |
+| Text Color (string) | Color of a point_worldtext |
+| Text Height (float) | Height from the ground of a point_worldtext |
 | Per Map (Dictionary<string, string>) | If map should have one specific bombsite always disabled. |
 | Debug (bool) | If plugin should log information |
 
