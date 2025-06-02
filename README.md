@@ -58,8 +58,8 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 {
   "Flag": "@css/root",
   "Type of Notification": 0,
-  "Hud timer": 20,
-  "Min Players": 10,
+  "Hud timer": 15,
+  "Min Players": 5,
   "Count Bots": true,
   "Team": 0,
   "Which Site To Block": 0,
@@ -72,9 +72,16 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
   "Block Site Laser": "Red",
   "Draw On Unlocked Bombsite": true,
   "Unlocked Site Laser": "Green",
+  "BombsiteSprite": "particles/bombsites/cat.vpcf",
+  "Text Display": true,
+  "Text Message": "Blocked!",
+  "Font Size": 35,
+  "Font Name": "Arial",
+  "Text Color": "Red",
+  "Text Height": 100,
   "PerMap": {
-	"de_dust2": "B",
-	"de_vertigo": "A"
+    "de_dust2": "B",
+    "de_vertigo": "A"
   },
   "Debug": true,
   "ConfigVersion": 1

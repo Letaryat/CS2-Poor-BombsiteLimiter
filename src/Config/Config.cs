@@ -54,7 +54,7 @@ namespace CS2_Poor_BombsiteLimiter.Config
         [JsonPropertyName("Unlocked Site Laser")]
         public string UnlockedSiteLaser { get; set; } = "Green";
         [JsonPropertyName("Bombsite Sprite")]
-        public string BombsiteSprite { get; set; } = "particles/bombsites/stopcat_2.vpcf";
+        public string BombsiteSprite { get; set; } = "particles/letaryat_bombsites/stopcat_2.vpcf";
         [JsonPropertyName("Bombsite Sprite Height")]
         public float BombsiteSpriteHeight { get; set; } = 200;
 
