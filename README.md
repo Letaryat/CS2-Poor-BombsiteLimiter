@@ -4,6 +4,8 @@ Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by Nocky
 
 ## [🛠️] New functions
 - Plugin can draw lasers around bombsites to indicate players if the bombsite is open or closed. If both bombsites are enabled, laser will be not generated.
+- Possibility to add custom particle (sprite) that will be spawned in the center of blocked bombsite and face players.
+- Possibility to add custom point_worldtext in the center of blocked bombsite that also face players.
 - If PlacingMode is enabled, plugin will generate .json file for each map. Owners can create Entities / Props (using css_bsentity or Ping, when css_placingmode is enabled) which will block way to get to the blocked bombsites. These props will spawn on Round Start if bombsite is blocked. 
 - Possibility for server owners to block one specific bombsite depending on a map.
 
@@ -37,6 +39,14 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | Block Site Laser (string) | What color blocked bombsite laser should be |
 | Draw On Unlocked Bombsite (bool) | If laser should be drawn of bombsite which is not blocked |
 | Unlocked Site Laser (string) | What color open bombsite laser should be | 
+| Bombsite Sprite (string) | Can be null. It spawns a sprite in the center of a blocked bombsite |
+| Bombsite Sprite Height (float) | Height from the ground of a sprite |
+| Text Display (bool) | If point_worldtext should be created that follows player camera |
+| Text Message (string) | Message of a point_worldtext that is created in the center of a blocked bombsite |
+| Font Size (float) | Size of a point_worldtext |
+| Font Name (string) | Font name of a point_worldtext |
+| Text Color (string) | Color of a point_worldtext |
+| Text Height (float) | Height from the ground of a point_worldtext |
 | Per Map (Dictionary<string, string>) | If map should have one specific bombsite always disabled. |
 | Debug (bool) | If plugin should log information |
 
@@ -50,8 +60,8 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 {
   "Flag": "@css/root",
   "Type of Notification": 0,
-  "Hud timer": 20,
-  "Min Players": 10,
+  "Hud timer": 15,
+  "Min Players": 5,
   "Count Bots": true,
   "Team": 0,
   "Which Site To Block": 0,
@@ -64,9 +74,16 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
   "Block Site Laser": "Red",
   "Draw On Unlocked Bombsite": true,
   "Unlocked Site Laser": "Green",
+  "BombsiteSprite": "particles/bombsites/cat.vpcf",
+  "Text Display": true,
+  "Text Message": "Blocked!",
+  "Font Size": 35,
+  "Font Name": "Arial",
+  "Text Color": "Red",
+  "Text Height": 100,
   "PerMap": {
-	"de_dust2": "B",
-	"de_vertigo": "A"
+    "de_dust2": "B",
+    "de_vertigo": "A"
   },
   "Debug": true,
   "ConfigVersion": 1

@@ -24,6 +24,10 @@ public class EventManager(CS2_Poor_BombsiteLimiter plugin)
         _plugin.RegisterListener<Listeners.OnServerPrecacheResources>((ResourceManifest manifest) =>
         {
             manifest.AddResource(_plugin.Config.FenceModel);
+            if (!string.IsNullOrWhiteSpace(_plugin.Config.BombsiteSprite))
+            {
+                manifest.AddResource(_plugin.Config.BombsiteSprite);
+            }
         });
         _plugin.RegisterListener<Listeners.OnMapStart>(OnMapStart);
         _plugin.RegisterListener<Listeners.OnTick>(OnTick);

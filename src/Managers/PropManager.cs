@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Text.Json;
 using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
@@ -98,7 +99,7 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
 
         prop.SetModel(model);
         prop.DispatchSpawn();
-        
+
         prop.Teleport(pos, angle);
     }
     public void SpawnProps(int bs)
@@ -128,5 +129,44 @@ public class PropManager(CS2_Poor_BombsiteLimiter plugin)
         File.WriteAllText(_mapFilePath!, JsonSerializer.Serialize(_props, options));
     }
 
+    public void CreateBombsiteSprite(CBaseEntity bs)
+    {
+        if (string.IsNullOrWhiteSpace(_plugin.Config.BombsiteSprite)) return;
+        if (bs == null) return;
+        var mid = _plugin.BombsiteUtils!.CalculateMid(bs);
+        if (mid == null) return;
+        CParticleSystem particle = Utilities.CreateEntityByName<CParticleSystem>("info_particle_system")!;
+
+        particle.EffectName = _plugin.Config.BombsiteSprite;
+        particle.Teleport(new Vector(mid!.X, mid.Y, mid.Z + _plugin.Config.BombsiteSpriteHeight), QAngle.Zero, Vector.Zero);
+
+        particle.StartActive = true;
+        particle.DispatchSpawn();
+
+        particle.AcceptInput("Start");
+    }
+
+    public void CreateBombsiteText(CBaseEntity bs)
+    {
+        if (!_plugin.Config.TextDisplay) return;
+        var mid = _plugin.BombsiteUtils!.CalculateMid(bs);
+        if (mid == null) return;
+        CPointWorldText textEnt = Utilities.CreateEntityByName<CPointWorldText>("point_worldtext")!;
+        textEnt.MessageText = _plugin.Config.TextMessage;
+        textEnt.Enabled = true;
+        textEnt.DepthOffset = 0.0f;
+        textEnt.WorldUnitsPerPx = 1f;
+        textEnt.FontName = _plugin.Config.FontName;
+        textEnt.FontSize = _plugin.Config.FontSize;
+        textEnt.Color = Color.FromName(_plugin.Config.TextColor);
+        textEnt.JustifyHorizontal = PointWorldTextJustifyHorizontal_t.POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER;
+        textEnt.JustifyVertical = PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_CENTER;
+        textEnt.ReorientMode = PointWorldTextReorientMode_t.POINT_WORLD_TEXT_REORIENT_AROUND_UP;
+        textEnt.Spawnflags = (uint)(
+            WorldTextPanelOrientation_t.WORLDTEXT_ORIENTATION_FACEUSER | WorldTextPanelOrientation_t.WORLDTEXT_ORIENTATION_FACEUSER_UPRIGHT
+        );
+        textEnt.Teleport(new Vector(mid!.X, mid.Y, mid.Z + _plugin.Config.TextHeight), new QAngle(0, 0, 100), Vector.Zero);
+        textEnt.DispatchSpawn();
+    }
 
 }

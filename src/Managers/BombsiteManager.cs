@@ -91,6 +91,8 @@ public class BombsiteManager(CS2_Poor_BombsiteLimiter plugin)
                     if (bs.IsValid)
                     {
                         bs.AcceptInput("Disable");
+                        _plugin.PropManager.CreateBombsiteText(bs);
+                        _plugin.PropManager.CreateBombsiteSprite(bs);
                         if (_plugin.Config.DrawLasers)
                         {
                             var mins = bs.AbsOrigin! + bs.Collision!.Mins;
