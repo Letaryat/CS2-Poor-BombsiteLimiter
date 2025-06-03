@@ -3,11 +3,11 @@ Bombsite Limiter for CS2. Main logic is based on [CS2_BombsitesRestrict by Nocky
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H8TK0L9)
 
 ## [🛠️] New functions
-- Plugin can draw lasers around bombsites to indicate players if the bombsite is open or closed. If both bombsites are enabled, laser will be not generated.
-- Possibility to add custom particle (sprite) that will be spawned in the center of blocked bombsite and face players.
-- Possibility to add custom point_worldtext in the center of blocked bombsite that also face players.
-- If PlacingMode is enabled, plugin will generate .json file for each map. Owners can create Entities / Props (using css_bsentity or Ping, when css_placingmode is enabled) which will block way to get to the blocked bombsites. These props will spawn on Round Start if bombsite is blocked. 
-- Possibility for server owners to block one specific bombsite depending on a map.
+- The plugin can draw laser beams around bombsites to indicate to players whether a bombsite is open or closed. If both bombsites are enabled, no lasers will be generated.
+- Option to add a custom particle that appears at the center of a blocked bombsite and always faces the players.
+- Option to add a custom point_worldtext at the center of a blocked bombsite that also faces the players.
+- When PlacingMode is enabled, the plugin will generate a .json file for each map. Server owners can create entities or props to physically block access to closed bombsites. These props will automatically spawn at the start of each round if the bombsite is blocked.
+- Server owners can choose to block a specific bombsite on a per-map basis.
 
 ## [📺] Video presentation
 This video shows some of the new functions of the plugin:
