@@ -100,4 +100,10 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
 | css_tpbsentity **ID** | Teleport to the entity that you placed |
 | css_bsentitylist | Prints all entities on map in player console |
 
+## [❤️] Special thanks to:
+- [CS2_BombsitesRestrict by NockyCZ](https://github.com/NockyCZ/CS2_BombsitesRestrict) - For creating CS_BombsiteRestrict
+- [Exkludera](https://github.com/exkludera) - For helping me with custom particles,
+- Wheatley - For providing cats.png with stop signs,
+
+
 ### [🚨] Plugin might be poorly written and have some issues. I have no idea what I am doing, but when tested it worked fine.
