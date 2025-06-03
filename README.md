@@ -75,6 +75,7 @@ https://youtu.be/2T1KsozkhEo?si=CvsS-OqQ1QMIxUlq
   "Draw On Unlocked Bombsite": true,
   "Unlocked Site Laser": "Green",
   "BombsiteSprite": "particles/bombsites/cat.vpcf",
+  "Bombsite Sprite Height": 200,
   "Text Display": true,
   "Text Message": "Blocked!",
   "Font Size": 35,
