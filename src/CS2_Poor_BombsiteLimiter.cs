@@ -13,7 +13,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public override string ModuleName => "Poor Bombsitelimiter";
 
     public override string ModuleAuthor => "Letaryat";
-    public override string ModuleVersion => "1.4.0";
+    public override string ModuleVersion => "1.4.1";
 
     public required PluginConfig Config { get; set; }
     public static CS2_Poor_BombsiteLimiter? Instance { get; private set; }
@@ -32,7 +32,6 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public bool DisablePlugin = false;
     public override void Load(bool hotReload)
     {
-        //Logger.LogInformation("Poor bombsite limiter loaded!");
         Console.WriteLine("CS2_Poor_BombsiteLimiter loaded! HF!");
 
         Instance = this;
