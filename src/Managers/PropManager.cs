@@ -4,8 +4,6 @@ using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Modules.Utils;
 using CS2_Poor_BombsiteLimiter.Models;
-using Microsoft.Extensions.Logging;
-using Serilog.Core;
 
 namespace CS2_Poor_BombsiteLimiter.Managers;
 

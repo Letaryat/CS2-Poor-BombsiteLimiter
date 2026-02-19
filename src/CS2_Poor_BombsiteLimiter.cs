@@ -4,8 +4,6 @@ using CS2_Poor_BombsiteLimiter.Managers;
 using CS2_Poor_BombsiteLimiter.Config;
 using CS2_Poor_BombsiteLimiter.Utils;
 using CS2_Poor_BombsiteLimiter.Models;
-using CounterStrikeSharp.API;
-using System.Diagnostics;
 namespace CS2_Poor_BombsiteLimiter;
 
 public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
@@ -13,7 +11,7 @@ public class CS2_Poor_BombsiteLimiter : BasePlugin, IPluginConfig<PluginConfig>
     public override string ModuleName => "Poor Bombsitelimiter";
 
     public override string ModuleAuthor => "Letaryat";
-    public override string ModuleVersion => "1.4.1";
+    public override string ModuleVersion => "1.4.2";
 
     public required PluginConfig Config { get; set; }
     public static CS2_Poor_BombsiteLimiter? Instance { get; private set; }

@@ -1,4 +1,3 @@
-using System.Text.Json.Serialization;
 
 namespace CS2_Poor_BombsiteLimiter.Models
 {

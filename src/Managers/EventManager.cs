@@ -1,9 +1,7 @@
 using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Modules.Admin;
-using CounterStrikeSharp.API.Modules.Events;
 using CounterStrikeSharp.API.Modules.Utils;
-using CS2_Poor_BombsiteLimiter.Utils;
 
 namespace CS2_Poor_BombsiteLimiter.Managers;
 

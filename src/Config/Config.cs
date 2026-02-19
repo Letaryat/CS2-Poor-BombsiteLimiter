@@ -1,4 +1,3 @@
-using System.Drawing;
 using System.Text.Json.Serialization;
 using CounterStrikeSharp.API.Core;
 
